@@ -8,9 +8,9 @@ const Admin = require("./models/Admin");
 const seedAdmin = async () => {
   await connectDB();
 
-const ADMIN_NAME = "Zuhair";
-const ADMIN_EMAIL = "myfitnessgym@gmail.com";
-const ADMIN_PASSWORD = "Admin@123";
+const ADMIN_NAME = process.env.ADMIN_NAME;
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
   if (!ADMIN_EMAIL || !ADMIN_PASSWORD) {
     console.error("ADMIN_EMAIL and ADMIN_PASSWORD must be set in .env");
